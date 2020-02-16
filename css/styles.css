@@ -1,0 +1,17 @@
+.test-box{
+  border: 3px solid blue;
+  padding: 8px;
+  width: 1250px;
+  margin: 35px;
+  background-color: #2ECC71;
+  float: right;
+}
+body{
+  background-image: url("../img/africa.jpg");
+}
+h2{
+  text-align: center;
+}
+h1{
+  text-align: center;
+}
