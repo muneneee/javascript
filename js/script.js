@@ -202,7 +202,7 @@ function getAkanName() {
 
     // alert(myAkanName)
 
-    document.getElementById("results").innerHTML = "Hey Your Akan name would be " + myAkanName + " since you were born on " + dayOfBirth;
+    document.getElementById("results").innerHTML = "Hey Your Akan name would be " + myAkanName ;
 
 
 
