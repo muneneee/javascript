@@ -31,78 +31,78 @@ function validateForm() {
         // alert("Please Input date");
         document.getElementById("date").innerHTML = "Day Required";
         document.getElementById("date").style.color = "red";
-        mdate.style.border = "2px solid red";
+        date.style.border = "2px solid red";
         return false;
     } else {
-        mdate.style.border = "";
-        if (!isNaN(mdate.value)) {
-            if (mdate.value <= 0 || mdate.value > 31) {
-                document.getElementById("dob").innerHTML = "Invalid date";
-                document.getElementById("dob").style.color = "red";
-                mdate.style.border = "2px solid red";
+        date.style.border = "";
+        if (!isNaN(date.value)) {
+            if (date.value <= 0 || date.value > 31) {
+                document.getElementById("date").innerHTML = "Invalid date";
+                document.getElementById("date").style.color = "red";
+                date.style.border = "2px solid red";
                 return false;
             } else {
-                document.getElementById("dob").innerHTML = "Date Ok!";
-                document.getElementById("dob").style.color = "green";
-                mdate.style.border = "2px solid green";
+                document.getElementById("date").innerHTML = "Date Ok!";
+                document.getElementById("date").style.color = "green";
+                date.style.border = "2px solid green";
             }
         } else {
-            document.getElementById("dob").innerHTML = "Day must be a Number";
-            document.getElementById("dob").style.color = "red";
-            mdate.style.border = "2px solid red";
+            document.getElementById("date").innerHTML = "Day must be a Number";
+            document.getElementById("date").style.color = "red";
+            date.style.border = "2px solid red";
             return false;
 
         }
     }
-    if (mmonth.value == "" || mmonth.value == null) {
+    if (month.value == "" || month.value == null) {
 
 
 
-        document.getElementById("mmonth").innerHTML = "Month Required";
-        document.getElementById("mmonth").style.color = "red";
-        mmonth.style.border = "2px solid red";
+        document.getElementById("month").innerHTML = "Month Required";
+        document.getElementById("month").style.color = "red";
+        month.style.border = "2px solid red";
         return false;
     } else {
-        if (!isNaN(mmonth.value)) {
-            if (mmonth.value <= 0 || mmonth.value > 12) {
-                document.getElementById("mmonth").innerHTML = "Invalid Month";
-                document.getElementById("mmonth").style.color = "red";
-                mmonth.style.border = "2px solid red";
+        if (!isNaN(month.value)) {
+            if (month.value <= 0 || month.value > 12) {
+                document.getElementById("month").innerHTML = "Invalid Month";
+                document.getElementById("month").style.color = "red";
+                month.style.border = "2px solid red";
                 return false;
             } else {
-                document.getElementById("mmonth").innerHTML = "Month Ok!";
-                document.getElementById("mmonth").style.color = "green";
-                mmonth.style.border = "2px solid green";
+                document.getElementById("month").innerHTML = "Month Ok!";
+                document.getElementById("month").style.color = "green";
+                month.style.border = "2px solid green";
             }
         } else {
-            document.getElementById("mmonth").innerHTML = "Month must be a Number";
-            document.getElementById("mmonth").style.color = "red";
-            mmonth.style.border = "2px solid red";
+            document.getElementById("month").innerHTML = "Month must be a Number";
+            document.getElementById("month").style.color = "red";
+            month.style.border = "2px solid red";
             return false;
         }
     }
-    if (myear.value == "" || myear.value == null) {
+    if (year.value == "" || year.value == null) {
 
-        document.getElementById("myear").innerHTML = "Year Required";
-        document.getElementById("myear").style.color = "red";
-        myear.style.border = "2px solid red";
+        document.getElementById("year").innerHTML = "Year Required";
+        document.getElementById("year").style.color = "red";
+        year.style.border = "2px solid red";
         return false;
     } else {
-        if (!isNaN(myear.value)) {
-            if (myear.value.length != 4) {
-                document.getElementById("myear").innerHTML = "Invalid Year";
-                document.getElementById("myear").style.color = "red";
-                myear.style.border = "2px solid red";
+        if (!isNaN(year.value)) {
+            if (year.value.length != 4) {
+                document.getElementById("year").innerHTML = "Invalid Year";
+                document.getElementById("year").style.color = "red";
+                year.style.border = "2px solid red";
                 return false;
             } else {
-                document.getElementById("myear").innerHTML = "Year Ok!";
-                document.getElementById("myear").style.color = "green";
-                myear.style.border = "2px solid green";
+                document.getElementById("year").innerHTML = "Year Ok!";
+                document.getElementById("year").style.color = "green";
+                year.style.border = "2px solid green";
             }
         } else {
-            document.getElementById("myear").innerHTML = "Year must be a Number";
-            document.getElementById("myear").style.color = "red";
-            myear.style.border = "2px solid red";
+            document.getElementById("year").innerHTML = "Year must be a Number";
+            document.getElementById("year").style.color = "red";
+            year.style.border = "2px solid red";
             return false;
         }
     }
@@ -126,12 +126,12 @@ function validateForm() {
 //functions to get user details
 function getUserDetails() {
     var gender = document.getElementsByName("gender");
-    var mdate = parseInt(document.getElementById("day").value);
-    var mmonth = parseInt(document.getElementById("month").value);
-    var myear = parseInt(document.getElementById("year").value);
-    // var mdate = 12;
-    // var mmonth = 12;
-    // var myear = 2012;
+    var date = parseInt(document.getElementById("day").value);
+    var month = parseInt(document.getElementById("month").value);
+    var year = parseInt(document.getElementById("year").value);
+    // var date = 12;
+    // var month = 12;
+    // var year = 2012;
     var i = 0;
 
     while (i < gender.length) {
@@ -144,9 +144,9 @@ function getUserDetails() {
 
 
     var userDetailsObj = {
-        date: mdate,
-        month: mmonth,
-        year: myear,
+        date: date,
+        month: month,
+        year: year,
         gender: mgender
     }
 
