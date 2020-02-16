@@ -21,16 +21,16 @@ var femaleAkanNames = {
 // form validation function
 function validateForm() {
     var gender = document.getElementsByName("gender");
-    var mdate = document.getElementById("day");
-    var mmonth = document.getElementById("month");
-    var myear = document.getElementById("year");
+    var date = document.getElementById("day");
+    var month = document.getElementById("month");
+    var year = document.getElementById("year");
     var formValid = false;
     var i = 0;
 
-    if (mdate.value == "" || mdate.value == null) {
+    if (date.value == "" || date.value == null) {
         // alert("Please Input date");
-        document.getElementById("dob").innerHTML = "Day Required";
-        document.getElementById("dob").style.color = "red";
+        document.getElementById("date").innerHTML = "Day Required";
+        document.getElementById("date").style.color = "red";
         mdate.style.border = "2px solid red";
         return false;
     } else {
